@@ -1,0 +1,109 @@
+[
+  {
+    "region": "ภาคเหนือ",
+    "provinces": [
+      { "name": "Chiang Mai (เชียงใหม่)", "lat": 18.7883, "lon": 98.9853 },
+      { "name": "Chiang Rai (เชียงราย)", "lat": 19.9105, "lon": 99.8406 },
+      { "name": "Lampang (ลำปาง)", "lat": 18.2888, "lon": 99.5034 },
+      { "name": "Lamphun (ลำพูน)", "lat": 18.5744, "lon": 99.0087 },
+      { "name": "Mae Hong Son (แม่ฮ่องสอน)", "lat": 19.3020, "lon": 97.9654 },
+      { "name": "Nan (น่าน)", "lat": 18.7756, "lon": 100.7730 },
+      { "name": "Phayao (พะเยา)", "lat": 19.1658, "lon": 99.9011 },
+      { "name": "Phrae (แพร่)", "lat": 18.1445, "lon": 100.1814 },
+      { "name": "Uttaradit (อุตรดิตถ์)", "lat": 17.6200, "lon": 100.0991 },
+      { "name": "Tak (ตาก)", "lat": 16.8839, "lon": 99.1259 },
+      { "name": "Sukhothai (สุโขทัย)", "lat": 17.0060, "lon": 99.8265 },
+      { "name": "Phitsanulok (พิษณุโลก)", "lat": 16.8211, "lon": 100.2659 },
+      { "name": "Phichit (พิจิตร)", "lat": 16.4426, "lon": 100.3477 },
+      { "name": "Kamphaeng Phet (กำแพงเพชร)", "lat": 16.4828, "lon": 99.5226 },
+      { "name": "Phetchabun (เพชรบูรณ์)", "lat": 16.4190, "lon": 101.1561 },
+      { "name": "Nakhon Sawan (นครสวรรค์)", "lat": 15.7014, "lon": 100.1416 },
+      { "name": "Uthai Thani (อุทัยธานี)", "lat": 15.3831, "lon": 100.0247 }
+    ]
+  },
+  {
+    "region": "ภาคตะวันออกเฉียงเหนือ",
+    "provinces": [
+      { "name": "Khon Kaen (ขอนแก่น)", "lat": 16.4322, "lon": 102.8236 },
+      { "name": "Nakhon Ratchasima (นครราชสีมา)", "lat": 14.9799, "lon": 102.0977 },
+      { "name": "Ubon Ratchathani (อุบลราชธานี)", "lat": 15.2289, "lon": 104.8594 },
+      { "name": "Udon Thani (อุดรธานี)", "lat": 17.4157, "lon": 102.7859 },
+      { "name": "Nakhon Phanom (นครพนม)", "lat": 17.4032, "lon": 104.7679 },
+      { "name": "Kalasin (กาฬสินธุ์)", "lat": 16.4325, "lon": 103.5063 },
+      { "name": "Chaiyaphum (ชัยภูมิ)", "lat": 15.8063, "lon": 102.0315 },
+      { "name": "Yasothon (ยโสธร)", "lat": 15.7926, "lon": 104.1453 },
+      { "name": "Roi Et (ร้อยเอ็ด)", "lat": 16.0538, "lon": 103.6520 },
+      { "name": "Loei (เลย)", "lat": 17.4860, "lon": 101.7223 },
+      { "name": "Sakon Nakhon (สกลนคร)", "lat": 17.1614, "lon": 104.1478 },
+      { "name": "Surin (สุรินทร์)", "lat": 14.8829, "lon": 103.4937 },
+      { "name": "Sisaket (ศรีสะเกษ)", "lat": 15.1186, "lon": 104.3220 },
+      { "name": "Nong Khai (หนองคาย)", "lat": 17.8783, "lon": 102.7414 },
+      { "name": "Maha Sarakham (มหาสารคาม)", "lat": 16.1843, "lon": 103.3023 },
+      { "name": "Mukdahan (มุกดาหาร)", "lat": 16.5434, "lon": 104.7235 },
+      { "name": "Amnat Charoen (อำนาจเจริญ)", "lat": 15.8656, "lon": 104.6258 },
+      { "name": "Bueng Kan (บึงกาฬ)", "lat": 18.3639, "lon": 103.6514 },
+      { "name": "Nong Bua Lam Phu (หนองบัวลำภู)", "lat": 17.2140, "lon": 102.4437 },
+      { "name": "Buri Ram (บุรีรัมย์)", "lat": 14.9930, "lon": 103.1029 }
+    ]
+  },
+  {
+    "region": "ภาคกลาง",
+    "provinces": [
+      { "name": "Bangkok (กรุงเทพมหานคร)", "lat": 13.7563, "lon": 100.5018 },
+      { "name": "Ayutthaya (พระนครศรีอยุธยา)", "lat": 14.3532, "lon": 100.5684 },
+      { "name": "Nonthaburi (นนทบุรี)", "lat": 13.8591, "lon": 100.5217 },
+      { "name": "Pathum Thani (ปทุมธานี)", "lat": 14.0207, "lon": 100.5250 },
+      { "name": "Samut Prakan (สมุทรปราการ)", "lat": 13.5991, "lon": 100.5998 },
+      { "name": "Samut Sakhon (สมุทรสาคร)", "lat": 13.5475, "lon": 100.2744 },
+      { "name": "Samut Songkhram (สมุทรสงคราม)", "lat": 13.4098, "lon": 100.0023 },
+      { "name": "Nakhon Pathom (นครปฐม)", "lat": 13.8196, "lon": 100.0622 },
+      { "name": "Suphan Buri (สุพรรณบุรี)", "lat": 14.4745, "lon": 100.1177 },
+      { "name": "Ang Thong (อ่างทอง)", "lat": 14.5896, "lon": 100.4547 },
+      { "name": "Sing Buri (สิงห์บุรี)", "lat": 14.8936, "lon": 100.4005 },
+      { "name": "Chai Nat (ชัยนาท)", "lat": 15.1852, "lon": 100.1251 },
+      { "name": "Saraburi (สระบุรี)", "lat": 14.5289, "lon": 100.9101 },
+      { "name": "Lopburi (ลพบุรี)", "lat": 14.7995, "lon": 100.6534 },
+      { "name": "Nakhon Nayok (นครนายก)", "lat": 14.2069, "lon": 101.2131 },
+      { "name": "Prachin Buri (ปราจีนบุรี)", "lat": 14.0531, "lon": 101.3708 },
+      { "name": "Chachoengsao (ฉะเชิงเทรา)", "lat": 13.6904, "lon": 101.0779 },
+      { "name": "Chanthaburi (จันทบุรี)", "lat": 12.6114, "lon": 102.1039 }
+    ]
+  },
+  {
+    "region": "ภาคตะวันออก",
+    "provinces": [
+      { "name": "Chon Buri (ชลบุรี)", "lat": 13.3611, "lon": 100.9847 },
+      { "name": "Rayong (ระยอง)", "lat": 12.6814, "lon": 101.2720 },
+      { "name": "Trat (ตราด)", "lat": 12.2452, "lon": 102.5156 },
+      { "name": "Sa Kaeo (สระแก้ว)", "lat": 13.8016, "lon": 102.0645 }
+    ]
+  },
+  {
+    "region": "ภาคตะวันตก",
+    "provinces": [
+      { "name": "Kanchanaburi (กาญจนบุรี)", "lat": 14.0228, "lon": 99.5328 },
+      { "name": "Ratchaburi (ราชบุรี)", "lat": 13.5286, "lon": 99.8134 },
+      { "name": "Phetchaburi (เพชรบุรี)", "lat": 13.1121, "lon": 99.9397 },
+      { "name": "Prachuap Khiri Khan (ประจวบคีรีขันธ์)", "lat": 11.8126, "lon": 99.7979 }
+    ]
+  },
+  {
+    "region": "ภาคใต้",
+    "provinces": [
+      { "name": "Phuket (ภูเก็ต)", "lat": 7.8804, "lon": 98.3923 },
+      { "name": "Songkhla (สงขลา)", "lat": 7.1756, "lon": 100.6146 },
+      { "name": "Surat Thani (สุราษฎร์ธานี)", "lat": 9.1382, "lon": 99.3216 },
+      { "name": "Nakhon Si Thammarat (นครศรีธรรมราช)", "lat": 8.4304, "lon": 99.9631 },
+      { "name": "Krabi (กระบี่)", "lat": 8.0863, "lon": 98.9063 },
+      { "name": "Phang Nga (พังงา)", "lat": 8.4510, "lon": 98.5257 },
+      { "name": "Ranong (ระนอง)", "lat": 9.9658, "lon": 98.6385 },
+      { "name": "Chumphon (ชุมพร)", "lat": 10.4930, "lon": 99.1800 },
+      { "name": "Trang (ตรัง)", "lat": 7.5563, "lon": 99.6112 },
+      { "name": "Phatthalung (พัทลุง)", "lat": 7.6167, "lon": 100.0740 },
+      { "name": "Satun (สตูล)", "lat": 6.6238, "lon": 100.0673 },
+      { "name": "Pattani (ปัตตานี)", "lat": 6.8686, "lon": 101.2504 },
+      { "name": "Yala (ยะลา)", "lat": 6.5411, "lon": 101.2804 },
+      { "name": "Narathiwat (นราธิวาส)", "lat": 6.4255, "lon": 101.8253 }
+    ]
+  }
+]

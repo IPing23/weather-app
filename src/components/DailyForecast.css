@@ -1,0 +1,160 @@
+/* กรอบการ์ดพยากรณ์รายวัน */
+.daily-container {
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  padding: 2rem;
+  border-radius: 24px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* รายการพยากรณ์และแถวของแต่ละวัน */
+.daily-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.daily-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffffff;
+  padding: 1rem 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+  transition: transform 0.2s ease;
+}
+
+/* เอฟเฟกต์เวลาเอาเมาส์ชี้กล่อง */
+.daily-item:hover {
+  transform: translateX(5px);
+}
+
+/* ชื่อวัน (ซ้ายสุด) */
+.daily-day {
+  flex: 1;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+/* ไอคอนและคำอธิบายสภาพอากาศ (ตรงกลาง) */
+.daily-info {
+  flex: 2;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.daily-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.daily-desc {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  text-transform: capitalize; /* บังคับให้ตัวอักษรพิมพ์ใหญ่ตัวแรกเสมอ (สำหรับภาษาอังกฤษ) */
+}
+
+/* ตัวเลขอุณหภูมิ (ขวาสุด) */
+.daily-temp {
+  display: flex;
+  align-items: baseline;
+  justify-content: flex-end;
+  gap: 8px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--primary-blue);
+  text-align: right;
+  white-space: nowrap;
+}
+
+.daily-temp-low {
+  color: var(--text-light);
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+/* พื้นที่โอกาสฝนตกและหลอดแสดงเปอร์เซ็นต์ */
+.rain-chance-container {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #cbd5e1;
+}
+
+.rain-chance-title {
+  font-size: 1.2rem;
+  color: var(--text-dark);
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+/* กล่องจัดเรียงรายการโอกาสฝนตกของแต่ละวัน */
+.rain-chance-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 24px; /* เพิ่มระยะห่างระหว่างวันให้ดูโปร่งขึ้น */
+}
+
+.rain-chance-item {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* กล่องครอบข้อความด้านบนหลอดกราฟ (ชื่อวัน และ เปอร์เซ็นต์) */
+.rain-chance-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px; /* ระยะห่างระหว่างข้อความกับหลอดกราฟ */
+}
+
+.rain-day {
+  font-size: 1.1rem; 
+  color: var(--text-dark);
+  font-weight: 600;
+}
+
+.rain-percent {
+  font-size: 1.1rem; 
+  font-weight: 700;
+  color: var(--primary-blue);
+}
+
+/* ฐานพื้นหลังหลอดกราฟ (สีเทาอ่อน) */
+.rain-bar-track {
+  width: 100%;
+  height: 14px; /* ขยายความหนาของหลอดกราฟ */
+  background-color: #e2e8f0;
+  border-radius: 10px;
+  position: relative; /* สำคัญ: ตั้งไว้เพื่อให้หลอดสีฟ้า (absolute) อ้างอิงพิกัดเกาะติดกับกล่องนี้ */
+  overflow: hidden; /* ถ้าสีฟ้าพุ่งทะลุกรอบ ให้ตัดส่วนที่ล้นออก (คงความโค้งมนของขอบไว้) */
+}
+
+/* ตัวหลอดกราฟ (สีฟ้า) ที่จะยืดตามเปอร์เซ็นต์ฝนตก */
+.rain-bar-fill {
+  position: absolute; /* ลอยทับไปบนแท่งสีเทา .rain-bar-track */
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: linear-gradient(90deg, #3b82f6 0%, #93c5fd 100%);
+  border-radius: 10px;
+  transition: width 0.8s ease-out;
+}
+
+/* ลดช่องไฟและขนาดองค์ประกอบบนมือถือ */
+@media (max-width: 600px) {
+  .daily-container { padding: 1.5rem 1rem; }
+  .daily-item { padding: 1rem; gap: 8px; }
+  
+  .daily-desc { font-size: 0.8rem; line-height: 1.2; }
+  .daily-day { font-size: 0.95rem; }
+  .daily-temp { font-size: 1.1rem; }
+  
+  .rain-chance-container { margin-top: 1.5rem; padding-top: 1.2rem; }
+  .rain-chance-grid { gap: 16px; }
+  .rain-day, .rain-percent { font-size: 1rem; }
+  .rain-bar-track { height: 10px; }
+}

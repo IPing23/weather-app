@@ -1,0 +1,73 @@
+/* แถบหัวเว็บติดด้านบนระหว่างเลื่อนหน้า */
+.app-header {
+  width: 100%;
+  background-color: #ffffff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* เงาใต้ Header */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5%; /* ซ้ายขวาเว้น 5% ไม่ให้ชิดขอบจอเกินไป */
+  position: sticky; /* ทำให้ Header เกาะติดขอบบนเสมอเวลาเลื่อนจอ */
+  top: 0;
+  z-index: 100;
+}
+
+/* โลโก้และข้อความแบรนด์ */
+.header-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-icon {
+  font-size: 2rem;
+}
+
+.header-title {
+  font-size: 1.5rem;
+  color: var(--primary-blue);
+  font-weight: 700;
+  margin: 0;
+  letter-spacing: -0.5px;
+}
+
+.header-time {
+  text-align: right;
+}
+
+.time-text {
+  font-size: 1.2rem;
+  color: var(--text-dark);
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+
+.date-text {
+  font-size: 0.85rem;
+  color: var(--text-light);
+  font-weight: 400;
+}
+
+/* ลดขนาดตัวอักษรบนโทรศัพท์ขนาดเล็ก */
+@media (max-width: 480px) {
+  .header-title {
+    font-size: 1.2rem;
+  }
+  .time-text {
+    font-size: 1rem;
+  }
+  .date-text {
+    font-size: 0.75rem;
+  }
+}
+
+/* เรียง Header เป็นแนวตั้งบนหน้าจอมือถือ */
+@media (max-width: 600px) {
+  .app-header {
+    flex-direction: column; /* เรียงโลโก้กับเวลาซ้อนกัน */
+    gap: 15px;
+    padding: 1.5rem 1rem;
+  }
+  .header-time { text-align: center; }
+  .unit-toggle-btn { width: 100%; justify-content: center; }
+}

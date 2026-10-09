@@ -1,0 +1,154 @@
+.weather-card {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* ดันเนื้อหาให้ห่างกัน */
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  padding: 3rem;
+  border-radius: 24px;
+  gap: 40px; /* ระยะห่างระหว่างฝั่งซ้ายและขวา */
+  animation: fadeIn 0.5s ease-out;
+}
+
+/* ข้อมูลหลัก: เมือง คำอธิบาย และอุณหภูมิ */
+.weather-main-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 1;
+}
+
+.weather-header h2 {
+  font-size: 3rem; /* ขยายตัวอักษรให้สมกับ 1400px */
+  color: var(--text-dark);
+  margin-bottom: 5px;
+}
+
+.weather-desc {
+  color: #ffffff;
+  background-color: var(--primary-blue);
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.weather-temp-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.weather-icon {
+  width: 180px; /* ขยายไอคอน */
+  height: 180px;
+  filter: drop-shadow(0 15px 20px rgba(0,0,0,0.15));
+}
+
+.temperature {
+  font-size: 7rem; /* ขยายอุณหภูมิให้เตะตา */
+  font-weight: 800;
+  color: var(--text-dark);
+  display: flex;
+  align-items: flex-start;
+  line-height: 1;
+}
+
+.temperature span {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-top: 15px;
+  color: var(--primary-blue);
+}
+
+/* รายละเอียดเพิ่มเติม เช่น ความรู้สึก อากาศ และความกดดัน */
+.weather-details {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* แบ่งเป็น 2 คอลัมน์ (กล่อง 2x2) */
+  gap: 20px;
+  flex: 1; /* กินพื้นที่ที่เหลือ */
+  width: 100%;
+}
+
+.detail-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+  transition: transform 0.2s ease;
+}
+
+.detail-item:hover {
+  transform: translateY(-5px);
+}
+
+.detail-label {
+  font-size: 1.1rem;
+  color: var(--text-light);
+  margin-bottom: 8px;
+}
+
+.detail-value {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+/* เรียงข้อมูลหลักและรายละเอียดซ้อนกันบนจอแคบ */
+@media (max-width: 900px) {
+  .weather-card {
+    flex-direction: column;
+    padding: 2rem;
+  }
+}
+
+/* ลดขนาดองค์ประกอบหลักในช่วง tablet */
+@media (max-width: 1024px) {
+  .weather-card {
+    padding: 2rem;
+    gap: 20px;
+  }
+  .temperature { font-size: 5rem; }
+  .weather-icon { width: 140px; height: 140px; }
+}
+
+/* จัดองค์ประกอบและข้อความให้อ่านง่ายบนโทรศัพท์ */
+@media (max-width: 600px) {
+  .weather-card {
+    flex-direction: column; /* จับข้อมูลเรียงซ้อนกันแนวตั้ง */
+    text-align: center;
+    padding: 1.5rem;
+  }
+  .weather-main-info { 
+    align-items: center; 
+    width: 100%; 
+    min-width: 0; 
+  }
+  .weather-header h2 { 
+    font-size: 1.8rem; 
+    word-break: break-word; /* ป้องกันชื่อเมืองยาวจนดันทะลุจอ ให้ปัดบรรทัดแทน */
+  }
+  .temperature { font-size: 3.5rem; justify-content: center; }
+  .temperature span { font-size: 1.2rem; }
+  .weather-details {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    width: 100%;
+  }
+  .detail-item { 
+    padding: 0.8rem; 
+    align-items: center; 
+    text-align: center; 
+    min-width: 0; 
+    width: 100%;
+  }
+  .detail-label { font-size: 0.9rem; }
+  .detail-value { font-size: 1.2rem; word-break: break-word; }
+}

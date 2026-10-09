@@ -1,0 +1,104 @@
+/* จัดตำแหน่งกรอบแดชบอร์ดหลักกลางหน้า */
+.main-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* กรอบเนื้อหาสีขาวที่ครอบ search และข้อมูลอากาศ */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1400px;
+  padding: 2.5rem 2rem;
+  background-color: var(--card-bg);
+  border-radius: 24px;
+  box-shadow: 0 10px 30px rgba(59, 130, 246, 0.1);
+  margin-top: 20px;
+}
+
+/* พื้นที่แสดง loading, error หรือแดชบอร์ด */
+.content-area {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.error-text {
+  text-align: center;
+  margin-top: 20px;
+  font-weight: 500;
+  color: #ef4444; /* สีแดงเวลามี Error */
+  background: #fef2f2;
+  padding: 10px 20px;
+  border-radius: 12px;
+}
+
+/* วางข้อมูลปัจจุบันทางซ้าย และพยากรณ์รายวันทางขวาบนจอกว้าง */
+.dashboard-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 2fr 1fr; /* ซ้ายกว้าง 2 ส่วน, ขวากว้าง 1 ส่วน */
+  gap: 30px;
+  margin-top: 10px;
+}
+
+.dashboard-left {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  min-width: 0; /* <--- หัวใจสำคัญ! สั่งให้กล่องยอมหดตัวไม่ดันหน้าจอ */
+  width: 100%;
+}
+
+.dashboard-right {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-width: 0; /* <--- หัวใจสำคัญ! */
+  width: 100%;
+}
+
+/* ปุ่มเปลี่ยนหน่วยอุณหภูมิใน Header */
+.unit-toggle-btn {
+  background-color: #ffffff;
+  border: 2px solid var(--primary-blue);
+  color: var(--primary-blue);
+  padding: 8px 16px;
+  border-radius: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
+  box-shadow: 0 4px 10px rgba(59, 130, 246, 0.15); /* เพิ่มเงาให้ปุ่มลอยขึ้นมา */
+}
+
+.unit-toggle-btn:hover {
+  background-color: var(--primary-blue);
+  color: #ffffff;
+  box-shadow: 0 6px 15px rgba(59, 130, 246, 0.25);
+}
+
+/* เปลี่ยนแดชบอร์ดเป็นคอลัมน์เดียวเมื่อพื้นที่ไม่พอ */
+@media (max-width: 1100px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr; /* ให้การ์ดเรียงซ้อนกัน 1 คอลัมน์บน iPad/Mobile */
+  }
+}
+
+@media (max-width: 600px) {
+  .main-content {
+    padding: 0; /* เอาขอบหน้าจอหลักออกให้หมด */
+  }
+  .app-container {
+    padding: 1.5rem 1rem;
+    margin-top: 0;
+    border-radius: 0; /* ทำให้กล่องแบนราบไปกับขอบจอมือถือ */
+    box-shadow: none;
+  }
+}

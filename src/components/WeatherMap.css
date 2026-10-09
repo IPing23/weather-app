@@ -1,0 +1,19 @@
+/* กรอบแผนที่และหัวข้อ */
+.map-container-wrapper {
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  padding: 2rem;
+  border-radius: 24px;
+  width: 100%;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* พื้นที่ที่ Leaflet ใช้วาดแผนที่ */
+.map-frame {
+  flex: 1;
+  width: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}

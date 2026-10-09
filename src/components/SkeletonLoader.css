@@ -1,0 +1,39 @@
+/* จัดเลย์เอาต์ให้กล่องจำลองเรียงต่อกันแนวตั้งเหมือนกับกล่องข้อมูลจริงที่จะโผล่มา */
+/* จัดกล่อง placeholder ให้เรียงเหมือนเนื้อหาที่กำลังโหลด */
+.skeleton-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 10px;
+}
+
+/* Gradient ขนาดใหญ่กว่ากล่องเพื่อให้เลื่อนเป็นแสง shimmer ได้ */
+.skeleton-card {
+  background: linear-gradient(90deg, #f1f5f9 25%, #e2e8f0 50%, #f1f5f9 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: 24px;
+}
+
+/* ขนาด placeholder ของข้อมูลปัจจุบัน */
+.skeleton-main {
+  height: 280px;
+  width: 100%;
+}
+
+/* ขนาด placeholder ของพยากรณ์รายชั่วโมง */
+.skeleton-sub {
+  height: 160px;
+  width: 100%;
+}
+
+/* เลื่อนแสงจากขวาไปซ้ายวนซ้ำ */
+@keyframes shimmer {
+  0% {
+    background-position: 200% 0; /* เริ่มต้นที่ขวาสุด */
+  }
+  100% {
+    background-position: -200% 0; /* วิ่งไปจบที่ซ้ายสุด */
+  }
+}
