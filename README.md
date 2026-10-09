@@ -10,7 +10,10 @@
 3. เปิดเว็บระหว่างพัฒนาด้วย `npm run dev`
 4. ตรวจรูปแบบโค้ดด้วย `npm run lint` และสร้างไฟล์ production ด้วย `npm run build`
 
-อย่า commit หรือเผยแพร่ค่า API key ใน `.env` ไฟล์นี้ถูกละเว้นโดย `.gitignore`
+อย่า commit ไฟล์ `.env` ซึ่งมี API key จริง โดยไฟล์นี้ถูกละเว้นใน `.gitignore`
+อย่างไรก็ตาม ตัวแปรที่ขึ้นต้นด้วย `VITE_` จะถูกรวมไว้ใน JavaScript ที่ส่งไปยังเบราว์เซอร์
+เมื่อ build หรือเผยแพร่เว็บ จึงไม่ควรถือว่า API key นี้เป็นความลับ หากเผยแพร่เว็บสาธารณะ
+ควรจำกัดสิทธิ์และโควตาของ key ใน OpenWeatherMap หรือเรียก API ผ่าน backend ที่เก็บ key ไว้ฝั่ง server
 
 ## แผนผังไฟล์
 
@@ -48,6 +51,7 @@
 | `eslint.config.js` | กฎ lint สำหรับ JavaScript, React Hooks และ React Refresh |
 | `.gitignore` | กัน dependencies, build output, log และไฟล์เฉพาะเครื่องจาก version control |
 | `.env` | API key เฉพาะเครื่อง; ห้ามเผยแพร่ |
+| `.env.example` | ตัวอย่างชื่อตัวแปรสำหรับตั้งค่า; ใช้ placeholder และไม่มี API key จริง |
 | `public/favicon.svg` | favicon ที่ `index.html` อ้างถึง |
 | `dist/` | ไฟล์ build ที่ Vite สร้าง ไม่แก้ด้วยมือ |
 | `node_modules/` | dependencies ที่ npm ติดตั้ง ไม่แก้ด้วยมือ |
